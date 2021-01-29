@@ -6,14 +6,14 @@ int main(int argc,char** argv){
   float overPay=0;
   float hours =stof(argv[1]);
   cout<<"Hours worked: "<<hours<<endl;
-  if(hours>40){
+  if(hours>40){//calculates if there is overtime
     regPay=40*16;
     overPay=(hours-40)*16*1.5;
   }else{
     regPay=hours*16;
   }
 
-  float grossPay = regPay+overPay;
+  float grossPay = regPay+overPay;//calculates the taxes
   float SS = grossPay*0.06;
   float fedIncome = grossPay*0.14;
   float stateTax = grossPay*0.05;
